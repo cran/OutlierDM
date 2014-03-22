@@ -1,0 +1,10 @@
+import(MatrixModels)
+importFrom(graphics, plot)
+importFrom(methods, show)
+import(outliers)
+import(quantreg)
+import(pcaPP)
+
+export(odm, odm.control) 
+exportClasses(OutlierDM)
+exportMethods(show, plot) 

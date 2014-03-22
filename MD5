@@ -1,0 +1,13 @@
+1f7361fab207b783c6c2eec06a2b441a *DESCRIPTION
+1efb18e3befabeb2b49386c7a5db7651 *NAMESPACE
+3de58eef46073c590cb3aba601ef1875 *R/OutlierD.R
+88d6c9f4423095a64d75279a8bcfe73b *R/odm.control.R
+f874858bd10f898c21055973367b755a *R/subfunctions.R
+d873104ba94aa266ec5e4443b5984321 *data/lcms3.rda
+4ba329f3e217ba066033cb96951ddb26 *inst/NEWS.Rd
+fee0aac936c6947c946b0b7e30669a04 *man/lcms3.Rd
+6d6a4316c4c937e2f36984002180ab3d *man/odm-class.Rd
+bf24445a792de06fe441f7381c4836cb *man/odm-package.Rd
+9085c3a0ecc48cc582ab5286d72d5966 *man/odm.Rd
+d16ff94053b177a8f8e775a245ea7818 *man/odm.control.Rd
+8918c4e325f63fb863d85023b315a8b2 *man/plot.odm.Rd
