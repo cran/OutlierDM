@@ -3,17 +3,17 @@
 \alias{OutlierDM-package}
 \docType{package}
 \title{
-	Functions for detecting outlying observations in (multiple) replicated high-throughput data
+	Functions for detecting outlying parameters (peptides) or observations (samples) in multi-replicated high-throughtput data such as mass spectrometry experiments
 }
 \description{
-  This package provides outlier detection algorithms for multiple replicated high-throughput high-dimensional data, especially in the field of mass spectrometry.
+  This package provides several outlier detection algorithms for multi-replicated high-throughput data ranged from classical approaches to boxplot approaches based on a MA plot.
 }
 \details{
 \tabular{ll}{
 Package: \tab OutlierDM\cr
 Type: \tab Package\cr
-Version: \tab 1.0-0\cr
-Date: \tab 2014-03-22\cr
+Version: \tab 1.1.1\cr
+Date: \tab 2014-12-23\cr
 License: \tab GPL version 3\cr
 LazyLoad: \tab no\cr
 }
@@ -24,32 +24,23 @@ Soo-Heang Eo <eo.sooheang@gmail.com> and HyungJun Cho <hj4cho@korea.ac.kr>
 Maintainer: Soo-Heang Eo <eo.sooheang@gmail.com>
 }
 \references{
-S-H Eo, D Pak, J Choi, H Cho (2012). Outlier Detection for Multiplicative High-throughput Data. \emph{BMC Research Notes}, \bold{5}, 1--6.
+Eo, S-H and Cho, H (2015) OutlierDM: More robust outlier detection algorithms for multi-replicated high-throughput data.
 
-Cho et al. (2008). OutlierD: an R package for outlier detection using quantile regression on mass spectrometry data. \emph{Bioinformatics}, \bold{24}(6), 882--884.
+Cho, H and Eo, S-H. (2015) Outlier detection for mass-spectrometry data.
 
-Min et al. (2007). Ultrahigh-pressure dual online solid phase extraction/capillary reverse-phase liquid chromatography/tandem mass spectrometry (DO-SPE/cRPLC/MS/MS): A versatile separation platform for high-throughput and highly sensitive proteomic analyses. \emph{ELECTROPHORESIS}, \bold{28}, 1012--1021. 
-}
-\examples{
-\dontrun{
-data(lcms3)
+Eo, S-H, Pak D, Choi J, Cho H (2012) Outlier detection using projection quantile regression for mass spectrometry data with low replication. BMC Res Notes. 
 
-## Fit projection approaches
-fit.proj.const <- odm(lcms3, method="constant")
-fit.proj.linear <- odm(lcms3, method="linear")
-fit.proj.nonlin <- odm(lcms3, method="nonlin")
-fit.proj.nonpara <- odm(lcms3, method="nonpar", lbda = 1)
+Cho H, Lee JW, Kim Y-J, et al. (2008) OutlierD: an R package for outlier detection using quantile regression on mass spectrometry data. Bioinformatics 24:882--884. 
 
-par(mfrow = c(2,2))
-plot(fit.proj.const, main = "Constant")
-plot(fit.proj.linear, main = "Linear")
-plot(fit.proj.nonlin, main = "NonLinear")
-plot(fit.proj.nonpara, main = "Nonparametric")
+Min H-K, Hyung S-W, Shin J-W, et al. (2007). Ultrahigh-pressure dual online solid phase extraction/capillary reverse-phase liquid chromatography/tandem mass spectrometry (DO-SPE / cRPLC / MS / MS): A versatile separation platform for high-throughput and highly sensitive proteomic analyses. Electrophoresis 28:1012--1021. 
 
-## Fit pairwise OutlierD algorithm
-fit0 <- odm(lcms3, type = "pair")
-plot(fit0)
-}
+Grubbs FE (1969) Procedures for detecting outlying observations in samples. Technometrics 11:1--21. 
+
+Dixon WJ (1951) Ratios involving extreme values. Ann Math Statistics 22:68--78. 
+
+Dixon WJ (1950) Analysis of extreme values. Ann Math Statistics 21:488--506. 
+
+Grubbs FE (1950) Sample criteria for testing outlying observations. Ann Math Statistics 21:27--58. 
 }
 \seealso{
     \code{\link{odm}}, \code{\link{odm.control}}, \code{\link[quantreg:rq]{quantreg}}
